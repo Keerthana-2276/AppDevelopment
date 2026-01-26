@@ -1,0 +1,22 @@
+{
+  "name": "BloomSphere - Floral Marketplace",
+  "short_name": "BloomSphere",
+  "start_url": "./ex1.html",
+  "display": "standalone",
+  "background_color": "#0b132b",
+  "theme_color": "#0b132b",
+  "icons": [
+    {
+      "src": "./logo2-192px.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./logo2.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
