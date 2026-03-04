@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BloomSphere | Global Floral Marketplace</title>
 
+  <!-- PWA Manifest -->
   <link rel="manifest" href="manifest.json">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="ex1.css">
 </head>
-
 <body>
 
 <!-- ================= HERO ================= -->
@@ -17,8 +19,8 @@
     url('https://images.unsplash.com/photo-1509042239860-f550ce710b93');
     background-size:cover;
     background-position:center;">
-
   <div class="hero-content">
+
     <h1>BloomSphere</h1>
     <p class="hero-sub">
       A global premium florist marketplace delivering emotions worldwide
@@ -27,10 +29,8 @@
     <div class="hero-btns">
       <button id="exploreBtn">Explore Roses</button>
       <button class="outline" id="sellerBtn">Become a Seller</button>
+      <button id="viewCartBtn">View Cart</button>
     </div>
-
-    <!-- 🛒 CART DISPLAY -->
-    <p id="cartDisplay">🛒 Cart: 0 items | Total: ₹0</p>
 
     <div class="hero-stats">
       <div><strong>30+</strong><span>Countries</span></div>
@@ -49,10 +49,10 @@
 
     <!-- RED ROSE -->
     <div class="card">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIeU4DHtkzDsEf1l6BooI2PuH2gBp_G7UDDg&s">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIeU4DHtkzDsEf1l6BooI2PuH2gBp_G7UDDg&s" alt="Red Roses">
       <div class="card-content">
         <h3>Red Rose</h3>
-        <p>Classic red roses representing love and passion.</p>
+        <p>Classic red roses representing love and passion, freshly sourced from Ecuador.</p>
         <div class="price">
           <span>₹1999</span>
           <button class="add-to-cart">Add to Cart</button>
@@ -62,10 +62,10 @@
 
     <!-- BLUSH PINK -->
     <div class="card">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV39lnVWKHWKZfpyerNtTg8d7puLQE8ZFc7w&s">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV39lnVWKHWKZfpyerNtTg8d7puLQE8ZFc7w&s" alt="Blush Pink Roses">
       <div class="card-content">
         <h3>Blush Pink</h3>
-        <p>Soft pastel Dutch roses.</p>
+        <p>Soft pastel Dutch roses known for layered petals and subtle elegance.</p>
         <div class="price">
           <span>₹1699</span>
           <button class="add-to-cart">Add to Cart</button>
@@ -75,10 +75,10 @@
 
     <!-- IVORY WHITE -->
     <div class="card">
-      <img src="https://hgtvhome.sndimg.com/content/dam/images/grdn/fullset/2013/5/21/0/Original_york-minster-rose.jpg.rend.hgtvcom.616.616.85.suffix/1452655040107.webp">
+      <img src="https://hgtvhome.sndimg.com/content/dam/images/grdn/fullset/2013/5/21/0/Original_york-minster-rose.jpg.rend.hgtvcom.616.616.85.suffix/1452655040107.webp" alt="Ivory White Roses">
       <div class="card-content">
         <h3>Ivory White</h3>
-        <p>Pure white roses for weddings.</p>
+        <p>Pure white roses symbolizing grace and new beginnings, ideal for weddings and formal occasions.</p>
         <div class="price">
           <span>₹1599</span>
           <button class="add-to-cart">Add to Cart</button>
@@ -88,10 +88,10 @@
 
     <!-- BLUE HYDRANGEA -->
     <div class="card">
-      <img src="https://img.freepik.com/premium-photo/close-up-blue-hydrangea-flowers-against-black-background_1048944-29044737.jpg">
+      <img src="https://img.freepik.com/premium-photo/close-up-blue-hydrangea-flowers-against-black-background_1048944-29044737.jpg?semt=ais_hybrid&w=740&q=80" alt="Blue Hydrangea">
       <div class="card-content">
         <h3>Blue Hydrangea</h3>
-        <p>Premium elegant blue arrangement.</p>
+        <p>Known for its lush clustered petals and calming blue tones.</p>
         <div class="price">
           <span>₹5499</span>
           <button class="add-to-cart">Add to Cart</button>
@@ -103,5 +103,6 @@
 </section>
 
 <script src="app.js"></script>
+
 </body>
 </html>
