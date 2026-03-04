@@ -2,14 +2,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   console.log("BloomSphere Loaded");
 
-  /* ================= SERVICE WORKER ================= */
+  /* SERVICE WORKER */
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js')
-      .then(reg => console.log('Service Worker registered'))
-      .catch(err => console.log('Service Worker failed'));
+      .then(reg => console.log('Service Worker registered:', reg.scope))
+      .catch(err => console.error('Service Worker failed:', err));
   }
 
-  /* ================= HERO BUTTONS ================= */
+  /* HERO BUTTONS */
   document.getElementById("exploreBtn").onclick = function () {
     document.querySelector(".flowers").scrollIntoView({ behavior: "smooth" });
   };
@@ -21,32 +21,40 @@ document.addEventListener("DOMContentLoaded", function () {
   /* ================= CART SYSTEM ================= */
 
   let cart = [];
-  let total = 0;
 
-  const cartDisplay = document.getElementById("cartDisplay");
-
+  // Add to Cart
   document.querySelectorAll(".add-to-cart").forEach(function (btn) {
-
     btn.onclick = function () {
 
       const card = btn.closest(".card");
       const name = card.querySelector("h3").innerText;
-      const priceText = card.querySelector(".price span").innerText;
+      const price = card.querySelector(".price span").innerText;
 
-      const price = parseInt(priceText.replace("₹", ""));
+      cart.push({ name, price });
 
-      cart.push({ name: name, price: price });
-      total += price;
-
-      cartDisplay.innerText =
-        "🛒 Cart: " + cart.length + " items | Total: ₹" + total;
-
-      alert(
-        "🛒 Added to Cart!\n\n" +
-        "Flower: " + name + "\n" +
-        "Price: ₹" + price
-      );
+      alert(name + " added to cart 🛒");
     };
   });
+
+  // View Cart
+  document.getElementById("viewCartBtn").onclick = function () {
+
+    if (cart.length === 0) {
+      alert("Your cart is empty 🛒");
+      return;
+    }
+
+    let message = "🛒 Your Cart:\n\n";
+    let total = 0;
+
+    cart.forEach(function (item, index) {
+      message += (index + 1) + ". " + item.name + " - " + item.price + "\n";
+      total += parseInt(item.price.replace("₹", ""));
+    });
+
+    message += "\nTotal: ₹" + total;
+
+    alert(message);
+  };
 
 });
